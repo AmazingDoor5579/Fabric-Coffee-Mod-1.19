@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "coffeemod:block/fire_stone_ore"
+      },
+      {
+        "model": "coffeemod:block/fire_stone_ore",
+        "y": 180
+      }
+    ]
+  }
+}

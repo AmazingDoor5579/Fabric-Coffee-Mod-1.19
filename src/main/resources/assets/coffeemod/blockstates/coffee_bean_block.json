@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "coffeemod:block/coffee_bean_block"
+      },
+      {
+        "model": "coffeemod:block/coffee_bean_block",
+        "y": 180
+      }
+    ]
+  }
+}

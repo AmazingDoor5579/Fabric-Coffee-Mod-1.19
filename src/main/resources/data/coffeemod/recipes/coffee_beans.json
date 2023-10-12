@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "coffeemod:coffee_bean_block"
+    }
+  ],
+  "result": {
+    "item": "coffeemod:coffee_beans",
+    "count": 9
+  }
+}

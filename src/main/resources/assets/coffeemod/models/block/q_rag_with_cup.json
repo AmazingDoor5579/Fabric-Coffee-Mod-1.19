@@ -1,0 +1,230 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+    "textures": {
+        "particle": "minecraft:block/coal_block",
+        "glass": "minecraft:block/glass",
+        "quartz_block_side": "minecraft:block/quartz_block_side",
+        "coal_block": "minecraft:block/coal_block"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "base",
+            "from": [ 5.5, 0, 2.5 ], 
+            "to": [ 7.2, 0.5, 11.5 ], 
+            "faces": {
+                "north": { "texture": "#coal_block", "uv": [ 0, 0, 1.7, 0.5 ] },
+                "south": { "texture": "#coal_block", "uv": [ 0, 0, 1.7, 0.5 ] },
+                "west": { "texture": "#coal_block", "uv": [ 0, 0, 9, 0.5 ] },
+                "up": { "texture": "#coal_block", "uv": [ 0, 0, 1.7, 9 ] },
+                "down": { "texture": "#coal_block", "uv": [ 0, 0, 1.7, 9 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.2, 0, 2.5 ], 
+            "to": [ 11.5, 8.5, 11.5 ], 
+            "faces": {
+                "north": { "texture": "#coal_block", "uv": [ 0, 0, 4.3, 8.5 ] },
+                "east": { "texture": "#coal_block", "uv": [ 0, 0, 9, 8.5 ] },
+                "south": { "texture": "#coal_block", "uv": [ 0, 0, 4.3, 8.5 ] },
+                "west": { "texture": "#coal_block", "uv": [ 0, 0, 9, 8.5 ] },
+                "up": { "texture": "#coal_block", "uv": [ 0, 0, 4.3, 9 ] },
+                "down": { "texture": "#coal_block", "uv": [ 0, 0, 4.3, 9 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.2, 0, 11.5 ], 
+            "to": [ 10.5, 0.5, 13.5 ], 
+            "faces": {
+                "east": { "texture": "#coal_block", "uv": [ 0, 0, 2, 0.5 ] },
+                "south": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 0.5 ] },
+                "west": { "texture": "#coal_block", "uv": [ 0, 0, 2, 0.5 ] },
+                "up": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 2 ] },
+                "down": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 2 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.5, 0.5, 2.5 ], 
+            "to": [ 7.2, 8.5, 11.5 ], 
+            "faces": {
+                "north": { "texture": "#glass", "uv": [ 12, 0, 15.7, 16 ] },
+                "south": { "texture": "#glass", "uv": [ 0, 0, 3.7, 16 ] },
+                "west": { "texture": "#glass", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.2, 8.5, 2.5 ], 
+            "to": [ 10.5, 9.9, 13.5 ], 
+            "faces": {
+                "north": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 1.4 ] },
+                "east": { "texture": "#coal_block", "uv": [ 0, 0, 11, 1.4 ] },
+                "south": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 1.4 ] },
+                "west": { "texture": "#coal_block", "uv": [ 0, 0, 11, 1.4 ] },
+                "up": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 11 ] },
+                "down": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 11 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.2, 9.9, 2.5 ], 
+            "to": [ 10.5, 10.5, 11.6 ], 
+            "faces": {
+                "north": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 0.6 ] },
+                "east": { "texture": "#coal_block", "uv": [ 0, 0, 9.1, 0.6 ] },
+                "south": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 0.6 ] },
+                "west": { "texture": "#coal_block", "uv": [ 0, 0, 9.1, 0.6 ] },
+                "up": { "texture": "#coal_block", "uv": [ 0, 0, 3.3, 9.1 ] }
+            }
+        },
+        {
+            "name": "base",
+            "from": [ 5.5, 8.5, 2.5 ], 
+            "to": [ 7.2, 9, 11.5 ], 
+            "faces": {
+                "north": { "texture": "#coal_block", "uv": [ 0, 0, 1.7, 0.5 ] },
+                "south": { "texture": "#coal_block", "uv": [ 0, 0, 1.7, 0.5 ] },
+                "west": { "texture": "#coal_block", "uv": [ 0, 0, 9, 0.5 ] },
+                "up": { "texture": "#coal_block", "uv": [ 0, 0, 1.7, 9 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.4, 0.5, 11.9 ], 
+            "to": [ 10.4, 0.8, 14.9 ], 
+            "faces": {
+                "north": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 0.3 ] },
+                "east": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 0.3 ] },
+                "south": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 0.3 ] },
+                "west": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 0.3 ] },
+                "up": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3 ] },
+                "down": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.4, 0.8, 11.6 ], 
+            "to": [ 10.4, 4.2, 11.9 ], 
+            "faces": {
+                "north": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3.4 ] },
+                "east": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3.4 ] },
+                "south": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3.4 ] },
+                "west": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3.4 ] },
+                "up": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 0.3 ] },
+                "down": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 0.3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.4, 0.8, 14.9 ], 
+            "to": [ 10.4, 4.2, 15.2 ], 
+            "faces": {
+                "north": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3.4 ] },
+                "east": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3.4 ] },
+                "south": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3.4 ] },
+                "west": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3.4 ] },
+                "up": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 0.3 ] },
+                "down": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 0.3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.1, 0.8, 11.9 ], 
+            "to": [ 7.4, 4.2, 14.9 ], 
+            "faces": {
+                "north": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3.4 ] },
+                "east": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3.4 ] },
+                "south": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3.4 ] },
+                "west": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3.4 ] },
+                "up": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3 ] },
+                "down": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 10.4, 0.8, 11.9 ], 
+            "to": [ 10.7, 4.2, 14.9 ], 
+            "faces": {
+                "north": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3.4 ] },
+                "east": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3.4 ] },
+                "south": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3.4 ] },
+                "west": { "texture": "#quartz_block_side", "uv": [ 0, 0, 3, 3.4 ] },
+                "up": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3 ] },
+                "down": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 10.7, 1, 13.2 ], 
+            "to": [ 12.1, 1.3, 13.5 ], 
+            "faces": {
+                "north": { "texture": "#quartz_block_side", "uv": [ 0, 0, 1.4, 0.3 ] },
+                "east": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 0.3 ] },
+                "south": { "texture": "#quartz_block_side", "uv": [ 0, 0, 1.4, 0.3 ] },
+                "west": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 0.3 ] },
+                "up": { "texture": "#quartz_block_side", "uv": [ 0, 0, 1.4, 0.3 ] },
+                "down": { "texture": "#quartz_block_side", "uv": [ 0, 0, 1.4, 0.3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 10.7, 3.5, 13.2 ], 
+            "to": [ 12.1, 3.8, 13.5 ], 
+            "faces": {
+                "north": { "texture": "#quartz_block_side", "uv": [ 0, 0, 1.4, 0.3 ] },
+                "east": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 0.3 ] },
+                "south": { "texture": "#quartz_block_side", "uv": [ 0, 0, 1.4, 0.3 ] },
+                "west": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 0.3 ] },
+                "up": { "texture": "#quartz_block_side", "uv": [ 0, 0, 1.4, 0.3 ] },
+                "down": { "texture": "#quartz_block_side", "uv": [ 0, 0, 1.4, 0.3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 12.1, 1.2, 13.2 ], 
+            "to": [ 12.4, 3.6, 13.5 ], 
+            "faces": {
+                "north": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 2.4 ] },
+                "east": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 2.4 ] },
+                "south": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 2.4 ] },
+                "west": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 2.4 ] },
+                "up": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 0.3 ] },
+                "down": { "texture": "#quartz_block_side", "uv": [ 0, 0, 0.3, 0.3 ] }
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "L L",
+    "III",
+    "IFI"
+  ],
+  "key": {
+    "F": {
+      "item": "coffeemod:fire_stone"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "coffeemod:jet_pack"
+  }
+}

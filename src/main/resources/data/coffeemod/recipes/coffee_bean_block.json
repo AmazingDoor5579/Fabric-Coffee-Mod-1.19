@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CCC",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "coffeemod:coffee_beans"
+    }
+  },
+  "result": {
+    "item": "coffeemod:coffee_bean_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "frequency": 0.2,
+    "salt": 14357619,
+    "separation": 8,
+    "spacing": 10
+  },
+  "structures": [
+    {
+      "structure": "coffeemod:bean_temple",
+      "weight": 1
+    }
+  ]
+}

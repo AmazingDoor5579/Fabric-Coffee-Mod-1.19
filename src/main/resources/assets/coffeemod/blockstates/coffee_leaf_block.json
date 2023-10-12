@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "grown=false":  { "model": "coffeemod:block/coffee_leaf_block" },
+    "grown=true":  { "model": "coffeemod:block/coffee_leaf_block_grown" }
+  }
+}

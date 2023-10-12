@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=south,jet_pack=true": { "model": "coffeemod:block/jetpack_stand_with_jetpack" },
+    "facing=north,jet_pack=true": { "model": "coffeemod:block/jetpack_stand_with_jetpack", "y": 180 },
+    "facing=east,jet_pack=true":  { "model": "coffeemod:block/jetpack_stand_with_jetpack", "y": 270 },
+    "facing=west,jet_pack=true":  { "model": "coffeemod:block/jetpack_stand_with_jetpack", "y": 90 },
+    "facing=south,jet_pack=false": { "model": "coffeemod:block/jetpack_stand_no_jetpack" },
+    "facing=north,jet_pack=false": { "model": "coffeemod:block/jetpack_stand_no_jetpack", "y": 180 },
+    "facing=east,jet_pack=false":  { "model": "coffeemod:block/jetpack_stand_no_jetpack", "y": 270 },
+    "facing=west,jet_pack=false":  { "model": "coffeemod:block/jetpack_stand_no_jetpack", "y": 90 }
+  }
+}

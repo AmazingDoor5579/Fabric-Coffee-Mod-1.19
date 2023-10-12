@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=south,cup=false,coffee=false": { "model": "coffeemod:block/q_rag" },
+    "facing=north,cup=false,coffee=false": { "model": "coffeemod:block/q_rag", "y": 180 },
+    "facing=east,cup=false,coffee=false":  { "model": "coffeemod:block/q_rag", "y": 270 },
+    "facing=west,cup=false,coffee=false":  { "model": "coffeemod:block/q_rag", "y": 90 },
+    "facing=south,cup=true,coffee=false": { "model": "coffeemod:block/q_rag_with_cup" },
+    "facing=north,cup=true,coffee=false": { "model": "coffeemod:block/q_rag_with_cup", "y": 180 },
+    "facing=east,cup=true,coffee=false":  { "model": "coffeemod:block/q_rag_with_cup", "y": 270 },
+    "facing=west,cup=true,coffee=false":  { "model": "coffeemod:block/q_rag_with_cup", "y": 90 },
+    "facing=south,cup=false,coffee=true": { "model": "coffeemod:block/q_rag_with_coffee" },
+    "facing=north,cup=false,coffee=true": { "model": "coffeemod:block/q_rag_with_coffee", "y": 180 },
+    "facing=east,cup=false,coffee=true":  { "model": "coffeemod:block/q_rag_with_coffee", "y": 270 },
+    "facing=west,cup=false,coffee=true":  { "model": "coffeemod:block/q_rag_with_coffee", "y": 90 }
+  }
+}

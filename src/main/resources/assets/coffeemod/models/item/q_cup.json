@@ -1,0 +1,66 @@
+{
+  "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+  "textures": {
+    "quartz_block_top": "minecraft:block/quartz_block_top",
+    "qrag_cup_top": "coffeemod:item/qrag_cup_top"
+  },
+  "display": {
+    "gui": {
+      "rotation": [ 30, 315, 0 ],
+      "translation": [ 0, 25, -17 ],
+      "scale": [ 6.625, 6.625, 6.625 ]
+    },
+    "ground": {
+      "rotation": [ 0, 0, 0 ],
+      "translation": [ 0, 10, 0 ],
+      "scale": [ 2.25, 2.25, 2.25 ]
+    },
+    "fixed": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 7.3, 0 ],
+      "scale": [ 2.5, 2.5, 2.5 ]
+    },
+    "head": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, 315, 0 ],
+      "translation": [ 0, 19.5, 0 ],
+      "scale": [ 2.4, 2.4, 2.4 ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ 90, 45, 0 ],
+      "translation": [ 0, 0.6, 9.7 ],
+      "scale": [ 1.375, 1.375, 1.375 ]
+    }
+  },
+  "elements": [
+    {
+      "name": "Cube",
+      "from": [ 7.5, 0, 7.5 ],
+      "to": [ 8.5, 1, 8.5 ],
+      "faces": {
+        "north": { "texture": "#quartz_block_top", "uv": [ 0, 0, 16, 16 ] },
+        "east": { "texture": "#quartz_block_top", "uv": [ 0, 0, 16, 16 ] },
+        "south": { "texture": "#quartz_block_top", "uv": [ 0, 0, 16, 16 ] },
+        "west": { "texture": "#quartz_block_top", "uv": [ 0, 0, 16, 16 ] },
+        "down": { "texture": "#quartz_block_top", "uv": [ 0, 0, 16, 16 ] }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [ 7.4, 1, 7.4 ],
+      "to": [ 8.6, 1.1, 8.6 ],
+      "faces": {
+        "north": { "texture": "#quartz_block_top", "uv": [ 0, 0, 1.2, 0.1 ] },
+        "east": { "texture": "#quartz_block_top", "uv": [ 0, 0, 1.2, 0.1 ] },
+        "south": { "texture": "#quartz_block_top", "uv": [ 0, 0, 1.2, 0.1 ] },
+        "west": { "texture": "#quartz_block_top", "uv": [ 0, 0, 1.2, 0.1 ] },
+        "up": { "texture": "#qrag_cup_top", "uv": [ 0, 0, 16, 16 ] },
+        "down": { "texture": "#quartz_block_top", "uv": [ 0, 0, 1.2, 1.2 ] }
+      }
+    }
+  ]
+}

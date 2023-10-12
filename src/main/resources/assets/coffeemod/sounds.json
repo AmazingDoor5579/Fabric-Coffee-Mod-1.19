@@ -1,0 +1,22 @@
+{
+  "coffee_thing_ambient": {
+    "sounds": [
+      "coffeemod:coffee_thing_ambient1"
+    ]
+  },
+  "coffee_thing_hurt": {
+    "sounds": [
+      "coffeemod:coffee_thing_hurt1"
+    ]
+  },
+  "coffee_golem_hurt": {
+    "sounds": [
+      "coffeemod:coffee_golem_hurt1"
+    ]
+  },
+  "coffee_golem_ambient": {
+    "sounds": [
+      "coffeemod:coffee_golem_ambient1"
+    ]
+  }
+}

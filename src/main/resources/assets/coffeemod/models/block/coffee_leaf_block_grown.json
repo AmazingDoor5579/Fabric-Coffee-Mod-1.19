@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+  "textures": {
+    "all": "coffeemod:block/coffee_leaves_grown"
+  }
+}

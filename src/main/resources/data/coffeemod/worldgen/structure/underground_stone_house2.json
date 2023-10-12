@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "coffeemod:coffee_forest",
+  "step": "underground_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "bury",
+  "start_pool": "coffeemod:underground_stone_house2",
+  "size": 1,
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": -62
+    },
+    "max_inclusive": {
+      "absolute": 50
+    }
+  },
+  "max_distance_from_center": 80,
+  "use_expansion_hack": true
+}

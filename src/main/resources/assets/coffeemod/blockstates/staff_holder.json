@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "staff=false":  { "model": "coffeemod:block/staff_holder" },
+    "staff=true":  { "model": "coffeemod:block/staff_holder_staff" }
+  }
+}

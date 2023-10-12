@@ -1,0 +1,27 @@
+{
+  "structures": [
+    {
+      "structure": "coffeemod:underground_stone_house1",
+      "weight": 1
+    },
+    {
+      "structure": "coffeemod:underground_stone_house2",
+      "weight": 3
+    },
+    {
+      "structure": "coffeemod:underground_stone_house3",
+      "weight": 3
+    },
+    {
+      "structure": "coffeemod:underground_stone_house4",
+      "weight": 3
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1425223602,
+    "frequency": 0.5,
+    "spacing": 10,
+    "separation": 5
+  }
+}
