@@ -16,7 +16,7 @@
                   "name": "",
                   "amount": 1,
                   "operation": "addition",
-                  "slot": "mainhand"
+                  "slot": "head"
                 }
               ]
             }
@@ -40,7 +40,7 @@
                   "name": "",
                   "amount": 1,
                   "operation": "addition",
-                  "slot": "mainhand"
+                  "slot": "chest"
                 }
               ]
             }
