@@ -45,3 +45,6 @@ trinkets-3.5.1: https://www.curseforge.com/minecraft/mc-mods/trinkets/files/4343
 ![Crafting Recipe for Diamond Hammer](./Crafting%20Recipes/Diamond%20Hammer.jpg)
 ### Netherite Hammer
 ![Crafting Recipe for Netherite Hammer](./Crafting%20Recipes/Netherite%20Hammer.jpg)
+## Explosives
+### Grenade
+![Crafting Recipe for Grenade](./Crafting%20Recipes/Grenade.jpg)
