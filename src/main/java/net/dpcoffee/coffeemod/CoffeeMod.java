@@ -5,6 +5,7 @@ import net.dpcoffee.coffeemod.Enchatment.EnchantmentRegistry;
 import net.dpcoffee.coffeemod.block.ModBlocks;
 import net.dpcoffee.coffeemod.blockentity.ModBlockEntities;
 import net.dpcoffee.coffeemod.entity.ModEntities;
+import net.dpcoffee.coffeemod.entity.custom.ChestMimicEntity;
 import net.dpcoffee.coffeemod.entity.custom.CoffeeGolemEntity;
 import net.dpcoffee.coffeemod.entity.custom.CoffeeSpiderEntity;
 import net.dpcoffee.coffeemod.entity.custom.CoffeeThingEntity;
@@ -49,6 +50,8 @@ public class CoffeeMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.COFFEE_THING, CoffeeThingEntity.setAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.COFFEE_GOLEM, CoffeeGolemEntity.setAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.COFFEE_SPIDER, CoffeeSpiderEntity.setAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.CHEST_MIMIC, ChestMimicEntity.setAttributes());
+
 		portalRegister();
 		soundRegister();
 		ModPackets.registerS2CPackets();

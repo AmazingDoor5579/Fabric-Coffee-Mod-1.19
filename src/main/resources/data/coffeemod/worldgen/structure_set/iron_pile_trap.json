@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "coffeemod:iron_pile_trap",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 533519642,
+    "spacing": 10,
+    "separation": 5
+  }
+}

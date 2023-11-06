@@ -1,0 +1,68 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.chest_mimic.open": {
+			"animation_length": 0.29167,
+			"bones": {
+				"Top": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.2917": {
+							"vector": [47.5, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.chest_mimic.idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"Top": {
+					"rotation": {
+						"0.0": {
+							"vector": [47.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [42.5, 0, 0]
+						},
+						"2.0": {
+							"vector": [47.5, 0, 0]
+						}
+					}
+				},
+				"Toung": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [5, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.chest_mimic.close": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"Top": {
+					"rotation": {
+						"0.0": {
+							"vector": [47.5, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

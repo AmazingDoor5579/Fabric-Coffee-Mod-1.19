@@ -48,6 +48,7 @@ public class CoffeeModClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.COFFEE_THING, CoffeeThingRenderer::new);
         EntityRendererRegistry.register(ModEntities.COFFEE_GOLEM, CoffeeGolemRenderer::new);
         EntityRendererRegistry.register(ModEntities.COFFEE_SPIDER, CoffeeSpiderRenderer::new);
+        EntityRendererRegistry.register(ModEntities.CHEST_MIMIC, ChestMimicRenderer::new);
 
 
         EntityRendererRegistry.register(ModEntities.FIRE_PROJECTILE, (context) -> new FlyingItemEntityRenderer<>(context));
