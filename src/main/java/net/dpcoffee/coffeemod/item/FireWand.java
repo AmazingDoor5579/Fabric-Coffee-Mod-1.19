@@ -20,6 +20,9 @@ public class FireWand extends Item {
 
     }
 
+
+
+
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         super.inventoryTick(stack, world, entity, slot, selected);

@@ -10,6 +10,7 @@ import net.dpcoffee.coffeemod.entity.custom.CoffeeGolemEntity;
 import net.dpcoffee.coffeemod.entity.custom.CoffeeSpiderEntity;
 import net.dpcoffee.coffeemod.entity.custom.CoffeeThingEntity;
 import net.dpcoffee.coffeemod.entity.projectile.GrenadeEntity;
+import net.dpcoffee.coffeemod.gen.ModEntitySpawn;
 import net.dpcoffee.coffeemod.item.ModItems;
 import net.dpcoffee.coffeemod.networking.ModPackets;
 import net.dpcoffee.coffeemod.screen.ModScreenHandlers;
@@ -55,6 +56,8 @@ public class CoffeeMod implements ModInitializer {
 		portalRegister();
 		soundRegister();
 		ModPackets.registerS2CPackets();
+
+		ModEntitySpawn.addEntitySpawn();
 
 
 

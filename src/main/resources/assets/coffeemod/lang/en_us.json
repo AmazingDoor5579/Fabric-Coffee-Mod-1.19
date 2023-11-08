@@ -5,6 +5,7 @@
   "item.coffeemod.coffee_beans":  "Coffee Beans",
   "item.coffeemod.coffee_thing_spawn_egg": "Coffee Thing Spawn Egg",
   "item.coffeemod.coffee_spider_spawn_egg": "Coffee Spider Spawn Egg",
+  "item.coffeemod.chest_mimic_spawn_egg": "Chest Mimic Spawn Egg",
   "item.coffeemod.fire_wand": "Fire Staff",
   "item.coffeemod.coffee_golem_spawn_egg": "Coffee Golem Spawn Egg",
   "item.coffeemod.fire_stone": "Fire Stone",
@@ -17,6 +18,7 @@
   "item.coffeemod.gold_hammer": "Gold Hammer",
   "item.coffeemod.diamond_hammer": "Diamond Hammer",
   "item.coffeemod.netherite_hammer": "Netherite Hammer",
+  "item.coffeemod.health_bracelet": "Health Bracelet",
   "block.coffeemod.coffee_bean_block": "Coffee Bean Block",
   "block.coffeemod.q_rag": "Q Rag",
   "block.coffeemod.coffee_leaf_block": "Coffee Tree Leaves",
@@ -28,6 +30,7 @@
   "options.grenadeIndicator": "Grenade Indicator",
   "entity.coffeemod.coffee_thing": "Coffee Thing",
   "entity.coffeemod.coffee_golem": "Coffee Golem",
-  "entity.coffeemod.coffee_spider": "Coffee Spider"
+  "entity.coffeemod.coffee_spider": "Coffee Spider",
+  "entity.coffeemod.chest_mimic": "Chest Mimic"
 
 }

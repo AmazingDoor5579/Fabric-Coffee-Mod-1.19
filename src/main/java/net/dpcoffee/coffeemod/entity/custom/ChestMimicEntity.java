@@ -122,15 +122,16 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
         this.dataTracker.set(POS_SET, true);
     }
 
+
     @Override
-    protected void applyDamage(DamageSource source, float amount) {
-        if(source.getAttacker().getClass() == ServerPlayerEntity.class) {
+    public boolean handleAttack(Entity attacker) {
+        if(attacker.getClass() == ServerPlayerEntity.class) {
             if(!this.world.isClient) {
                 this.dataTracker.set(ACTIVE, true);
                 this.dataTracker.set(ACTIVE_TIME, 100);
             }
         }
-        super.applyDamage(source, amount);
+        return super.handleAttack(attacker);
     }
 
     @Override
