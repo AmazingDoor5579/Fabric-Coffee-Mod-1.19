@@ -17,6 +17,7 @@ import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -105,7 +106,7 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
         }
 
         if(this.dataTracker.get(ACTIVE)) {
-            if (this.onGround && this.getTarget() != null && r.nextInt(10) == 3) {
+            if (this.onGround && this.getTarget() != null && r.nextInt(60) == 3) {
                 this.getMoveControl().moveTo(this.getTarget().getX(), this.getTarget().getY(), this.getTarget().getZ(), 4);
                 this.addVelocity(0, r.nextFloat(0.8f), 0);
             }
@@ -149,7 +150,7 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 60.00)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0f)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 10.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 15);
     }
 
@@ -161,14 +162,14 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
-        this.goalSelector.add(2, new TargetGoal<PlayerEntity>(this, PlayerEntity.class));
-        this.goalSelector.add(3, new AttackGoal(this));
+        this.goalSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, false));
+        //this.goalSelector.add(1, new TargetGoal<PlayerEntity>(this, PlayerEntity.class));
+        this.goalSelector.add(2, new MeleeAttackGoal(this, 1, false));
     }
 
     private <E extends GeoAnimatable> PlayState predicate(AnimationState<E> state) {
         if(this.dataTracker.get(ACTIVE)) {
             if (state.isCurrentAnimation(CLOSE) || (state.isCurrentAnimation(OPEN) && state.getController().getAnimationState().equals(AnimationController.State.RUNNING))) {
-                //state.getController().forceAnimationReset();
                 return state.setAndContinue(OPEN);
             }
             return state.setAndContinue(IDLE);
@@ -188,15 +189,19 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
         return this.cache;
     }
 
-    static class TargetGoal<T extends LivingEntity> extends ActiveTargetGoal<T> {
-        public TargetGoal(ChestMimicEntity entity, Class<T> targetEntityClass) {
-            super((MobEntity) entity, targetEntityClass, true);
-        }
+    @Override
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
+        nbt.putBoolean("active", this.dataTracker.get(ACTIVE));
+        nbt.putInt("active_time", this.dataTracker.get(ACTIVE_TIME));
+        nbt.putBoolean("pos_set", this.dataTracker.get(POS_SET));
+    }
 
-        @Override
-        public boolean canStart() {
-            this.findClosestTarget();
-            return this.targetEntity != null;
-        }
+    @Override
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
+        this.dataTracker.set(ACTIVE, nbt.getBoolean("active"));
+        this.dataTracker.set(ACTIVE_TIME, nbt.getInt("active_time"));
+        this.dataTracker.set(POS_SET, nbt.getBoolean("pos_set"));
     }
 }

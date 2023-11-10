@@ -4,14 +4,19 @@ import com.google.common.collect.Multimap;
 import dev.emi.trinkets.api.SlotAttributes;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketItem;
+import dev.emi.trinkets.api.TrinketsApi;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.tag.EntityTypeTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
@@ -23,6 +28,7 @@ import java.util.UUID;
 
 public class HealthBraceletItem extends TrinketItem {
     Random r = new Random();
+
     public HealthBraceletItem(Settings settings) {
         super(settings);
     }
@@ -47,13 +53,19 @@ public class HealthBraceletItem extends TrinketItem {
         }
     }
 
+    @Override
+    public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {
+        super.tick(stack, slot, entity);
+        stack.getNbt().putFloat("player_health", entity.getHealth());
+    }
 
 
     @Override
     public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
         var modifiers = super.getModifiers(stack, slot, entity, uuid);
         if(stack.hasNbt()) {
-            modifiers.put(EntityAttributes.GENERIC_MAX_HEALTH, new EntityAttributeModifier(uuid, "coffeemod:max_health", stack.getNbt().getInt("modifier"), EntityAttributeModifier.Operation.ADDITION));
+            modifiers.put(EntityAttributes.GENERIC_MAX_HEALTH, new EntityAttributeModifier(uuid, "generic.max_health", stack.getNbt().getInt("modifier"), EntityAttributeModifier.Operation.ADDITION));
+
         }
         //SlotAttributes.addSlotModifier(modifiers, "hand/glove", uuid, 1, EntityAttributeModifier.Operation.ADDITION);
         return modifiers;
