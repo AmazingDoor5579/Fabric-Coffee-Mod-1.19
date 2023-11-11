@@ -54,13 +54,6 @@ public class HealthBraceletItem extends TrinketItem {
     }
 
     @Override
-    public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {
-        super.tick(stack, slot, entity);
-        stack.getNbt().putFloat("player_health", entity.getHealth());
-    }
-
-
-    @Override
     public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
         var modifiers = super.getModifiers(stack, slot, entity, uuid);
         if(stack.hasNbt()) {

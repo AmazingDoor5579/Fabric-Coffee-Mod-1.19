@@ -37,7 +37,6 @@ public abstract class ModEntityDataSaverMixin {
         if(set_health != null){
             if(getMaxHealth() > 20) {
                 setHealth(set_health);
-                System.out.println(set_health);
                 set_health = null;
             }
         }

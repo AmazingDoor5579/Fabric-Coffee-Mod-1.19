@@ -20,6 +20,7 @@ public class ModItems {
     public static final Item NETHERITE_INFUSED_COFFEE_BEANS = registerItem("netherite_infused_coffee_beans", new Item(new FabricItemSettings()), ItemGroups.FOOD_AND_DRINK);
     public static final Item GRENADE_ITEM = registerItem("grenade", new GrenadeItem(new FabricItemSettings()), ItemGroups.COMBAT);
     public static final Item HEALTH_BRACELET = registerItem("health_bracelet", new HealthBraceletItem(new FabricItemSettings().maxCount(1)), ItemGroups.COMBAT);
+    public static final Item NECKLACE_OF_REGENERATION = registerItem("necklace_of_regeneration", new NecklaceOfRegenerationItem(new FabricItemSettings().maxCount(1)), ItemGroups.COMBAT);
 
     public static final Item WOODEN_HAMMER = registerItem("wooden_hammer", new HammerItem(new FabricItemSettings().maxCount(1).maxDamage(300), -3.3f, ToolMaterials.WOOD), ItemGroups.COMBAT);
     public static final Item STONE_HAMMER = registerItem("stone_hammer", new HammerItem(new FabricItemSettings().maxCount(1).maxDamage(550), -3.3f, ToolMaterials.STONE), ItemGroups.COMBAT);

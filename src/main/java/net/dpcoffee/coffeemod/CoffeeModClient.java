@@ -7,6 +7,7 @@ import net.dpcoffee.coffeemod.entity.ModEntities;
 import net.dpcoffee.coffeemod.entity.client.*;
 import net.dpcoffee.coffeemod.entity.inventory.HealthRingEntityRenderer;
 import net.dpcoffee.coffeemod.entity.inventory.JetPackEntityRenderer;
+import net.dpcoffee.coffeemod.entity.inventory.NecklaceOfRegenerationRenderer;
 import net.dpcoffee.coffeemod.event.KeyInputHandler;
 import net.dpcoffee.coffeemod.item.ModItems;
 import net.dpcoffee.coffeemod.networking.ModPackets;
@@ -30,8 +31,10 @@ public class CoffeeModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STAFF_HOLDER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COFFEE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STAFF_HOLDER, RenderLayer.getTranslucent());
+
         TrinketRendererRegistry.registerRenderer(ModItems.JET_PACK, new JetPackEntityRenderer());
         TrinketRendererRegistry.registerRenderer(ModItems.HEALTH_BRACELET, new HealthRingEntityRenderer());
+        TrinketRendererRegistry.registerRenderer(ModItems.NECKLACE_OF_REGENERATION, new NecklaceOfRegenerationRenderer());
 
         EntityRendererRegistry.register(ModEntities.COFFEE_THING, CoffeeThingRenderer::new);
         EntityRendererRegistry.register(ModEntities.COFFEE_GOLEM, CoffeeGolemRenderer::new);

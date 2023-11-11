@@ -1,0 +1,15 @@
+{
+  "name": "coffeemod:dungeon/dungeon",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "coffeemod:dungeon_four_way_connecter",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

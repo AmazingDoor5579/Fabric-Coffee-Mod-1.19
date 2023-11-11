@@ -1,0 +1,15 @@
+{
+  "name": "coffeemod:dungeon/hall_segment",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "coffeemod:dungeon_bridge_segment",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

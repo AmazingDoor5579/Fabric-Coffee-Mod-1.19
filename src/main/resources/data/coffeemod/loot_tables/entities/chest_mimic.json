@@ -63,7 +63,20 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "coffeemod:health_bracelet"
+          "name": "coffeemod:necklace_of_regeneration"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "coffeemod:health_bracelet",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
         }
       ],
       "functions": [
