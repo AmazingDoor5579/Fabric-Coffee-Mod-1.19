@@ -28,11 +28,11 @@ public class FireProjectile extends SmallFireballEntity {
     @Override
     public void tick() {
         super.tick();
-        world.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, getX(), getY(), getZ(), 0.0D, 0.0D, 0.0D);
+        getWorld().addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, getX(), getY(), getZ(), 0.0D, 0.0D, 0.0D);
         if(this.life > 0) {
             this.life--;
         } else {
-            if(!this.world.isClient){
+            if(!this.getWorld().isClient){
                 this.kill();
             }
         }

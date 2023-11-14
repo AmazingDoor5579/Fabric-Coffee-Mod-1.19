@@ -29,7 +29,7 @@ public class CoffeeGolemEntity extends HostileEntity implements GeoEntity {
 
     public CoffeeGolemEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
-        this.stepHeight = 1.0f;
+        this.setStepHeight(1.0f);
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {

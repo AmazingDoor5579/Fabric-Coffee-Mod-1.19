@@ -52,7 +52,7 @@ public class KeyInputHandler {
         client.player.getWorld().playSound(null, client.player.getBlockPos(), SoundEvents.BLOCK_LAVA_EXTINGUISH, SoundCategory.BLOCKS, 0.4f, 1.0f);
         client.player.playSound(SoundEvents.BLOCK_LAVA_EXTINGUISH, 0.4f, 1);
         client.player.getWorld().addParticle(ParticleTypes.POOF, client.player.getX(), client.player.getY(), client.player.getZ(), 0.0D, 0.2D, 0.0D);
-        client.player.airStrafingSpeed = 0.1f;
+
         ClientPlayNetworking.send(ModPackets.FLYING_ID, PacketByteBufs.create());
 
     }

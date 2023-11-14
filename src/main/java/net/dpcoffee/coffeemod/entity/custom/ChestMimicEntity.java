@@ -54,7 +54,7 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
 
     public ChestMimicEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
-        this.stepHeight = 3.0f;
+        this.setStepHeight(3.0f);
     }
 
 
@@ -106,7 +106,7 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
         }
 
         if(this.dataTracker.get(ACTIVE)) {
-            if (this.onGround && this.getTarget() != null && r.nextInt(60) == 3) {
+            if (this.isOnGround() && this.getTarget() != null && r.nextInt(60) == 3) {
                 this.getMoveControl().moveTo(this.getTarget().getX(), this.getTarget().getY(), this.getTarget().getZ(), 4);
                 this.addVelocity(0, r.nextFloat(0.8f), 0);
             }
@@ -127,7 +127,7 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
     @Override
     public boolean handleAttack(Entity attacker) {
         if(attacker.getClass() == ServerPlayerEntity.class) {
-            if(!this.world.isClient) {
+            if(!this.getWorld().isClient) {
                 this.dataTracker.set(ACTIVE, true);
                 this.dataTracker.set(ACTIVE_TIME, 100);
             }
@@ -137,11 +137,11 @@ public class ChestMimicEntity extends HostileEntity implements GeoEntity {
 
     @Override
     protected ActionResult interactMob(PlayerEntity player, Hand hand) {
-        if(!this.world.isClient) {
+        if(!this.getWorld().isClient) {
             this.dataTracker.set(ACTIVE, true);
             this.dataTracker.set(ACTIVE_TIME, 100);
         }
-        return ActionResult.success(this.world.isClient);
+        return ActionResult.success(this.getWorld().isClient);
 
     }
 

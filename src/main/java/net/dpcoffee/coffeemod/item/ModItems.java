@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
@@ -38,7 +39,7 @@ public class ModItems {
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(CoffeeMod.MOD_ID, name), item);
     }
-    private static Item registerItem(String name, Item item, ItemGroup group) {
+    private static Item registerItem(String name, Item item, RegistryKey<ItemGroup> group) {
         ItemGroupEvents.modifyEntriesEvent(group).register(content -> content.add(item));
         return Registry.register(Registries.ITEM, new Identifier(CoffeeMod.MOD_ID, name), item);
     }

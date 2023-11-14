@@ -174,9 +174,9 @@ public class CoffeeThingEntity extends HostileEntity implements GeoEntity {
                 double g = livingEntity.getZ() - this.coffee_thing.getZ();
                 if (this.cool_down <= 0) {
                     double h = Math.sqrt(Math.sqrt(d)) * 0.5;
-                    SmallFireballEntity smallFireballEntity = new SmallFireballEntity(this.coffee_thing.world, this.coffee_thing, this.coffee_thing.getRandom().nextTriangular(e, 2.297 * h), f, this.coffee_thing.getRandom().nextTriangular(g, 2.297 * h));
+                    SmallFireballEntity smallFireballEntity = new SmallFireballEntity(this.coffee_thing.getWorld(), this.coffee_thing, this.coffee_thing.getRandom().nextTriangular(e, 2.297 * h), f, this.coffee_thing.getRandom().nextTriangular(g, 2.297 * h));
                     smallFireballEntity.setPosition(smallFireballEntity.getX(), this.coffee_thing.getBodyY(0.5), smallFireballEntity.getZ());
-                    this.coffee_thing.world.spawnEntity(smallFireballEntity);
+                    this.coffee_thing.getWorld().spawnEntity(smallFireballEntity);
                     this.cool_down = 100;
                     this.coffee_thing.setShot(true);
                 }

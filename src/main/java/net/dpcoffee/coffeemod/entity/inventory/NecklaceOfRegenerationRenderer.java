@@ -11,6 +11,7 @@ import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.json.ModelTransformation;
+import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
@@ -28,6 +29,6 @@ public class NecklaceOfRegenerationRenderer implements TrinketRenderer {
         matrices.multiply(new Quaternionf(new AxisAngle4f(3.141592f, 0f,1f ,0f)));
         matrices.scale(1.0f, 1.0f, 0.95f);
         matrices.translate(0.0F, 0.41F, 0.08F);
-        itemRenderer.renderItem(entity, itemStack, ModelTransformation.Mode.FIXED, false, matrices, vertexConsumers, entity.world, light, OverlayTexture.DEFAULT_UV, 0);
+        itemRenderer.renderItem(entity, itemStack, ModelTransformationMode.FIXED, false, matrices, vertexConsumers, entity.getWorld(), light, OverlayTexture.DEFAULT_UV, 0);
     }
 }

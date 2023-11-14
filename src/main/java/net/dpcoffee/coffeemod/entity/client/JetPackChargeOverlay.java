@@ -7,7 +7,7 @@ import net.dpcoffee.coffeemod.item.JetPackItem;
 import net.dpcoffee.coffeemod.item.ModItems;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawableHelper;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -18,7 +18,7 @@ public class JetPackChargeOverlay implements HudRenderCallback {
     private static final Identifier CHARGE_FULL_RIGHT = new Identifier(CoffeeMod.MOD_ID, "textures/jetpack/jetpack_meter_right.png");
     private final int offset = 92;
     @Override
-    public void onHudRender(MatrixStack matrixStack, float tickDelta) {
+    public void onHudRender(DrawContext drawContext, float tickDelta) {
         int x = 0;
         int y = 0;
         MinecraftClient client = MinecraftClient.getInstance();
@@ -42,14 +42,14 @@ public class JetPackChargeOverlay implements HudRenderCallback {
                     if ((Math.ceil(stack.getNbt().getInt("fuel")/ 500) >= i) && stack.getNbt().getInt("fuel") != 0) {
                         if (i == 9) {
                             RenderSystem.setShaderTexture(0, CHARGE_FULL_RIGHT);
-                            DrawableHelper.drawTexture(matrixStack, x + offset + (i * 9), y - 5, 0, 0, 12, 4, 12, 4);
+                            drawContext.drawTexture(CHARGE_FULL_RIGHT, x + offset + (i * 9), y - 5, 0, 0, 12, 4, 12, 4);
                         } else if(i == 0) {
                             RenderSystem.setShaderTexture(0, CHARGE_FULL_LEFT);
-                            DrawableHelper.drawTexture(matrixStack, x + offset + (i * 9), y - 5, 0, 0, 12, 4, 12, 4);
+                            drawContext.drawTexture(CHARGE_FULL_LEFT, x + offset + (i * 9), y - 5, 0, 0, 12, 4, 12, 4);
 
                         } else {
                             RenderSystem.setShaderTexture(0, CHARGE_FULL);
-                            DrawableHelper.drawTexture(matrixStack, x + offset + (i * 9), y - 5, 0, 0, 12, 4, 12, 4);
+                            drawContext.drawTexture(CHARGE_FULL, x + offset + (i * 9), y - 5, 0, 0, 12, 4, 12, 4);
                         }
                     } else {
                         break;

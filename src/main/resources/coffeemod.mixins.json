@@ -8,7 +8,6 @@
   "client": [
     "BlockMixin",
     "GameOptionsMixin",
-    "VideoOptionsScreenMixin",
     "ModEntityDataSaverMixin"
   ],
   "injectors": {

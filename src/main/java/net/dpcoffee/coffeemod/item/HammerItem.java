@@ -13,10 +13,16 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageSources;
+import net.minecraft.entity.damage.DamageType;
+import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.RegistryEntryLookup;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -111,13 +117,14 @@ public class HammerItem extends ToolItem {
         int lookZ = user.getHorizontalFacing().getVector().getZ();
         int dirX = lookX * reachMultiplier;
         int dirZ = lookZ * reachMultiplier;
-        List<Entity> list = user.world.getOtherEntities(user, new Box(pos.getX() - dirZ, pos.getY(), pos.getZ() + dirX, pos.getX() + dirX + dirZ, pos.getY() + 2, pos.getZ() - dirX + dirZ));
+        List<Entity> list = user.getWorld().getOtherEntities(user, new Box(pos.getX() - dirZ, pos.getY(), pos.getZ() + dirX, pos.getX() + dirX + dirZ, pos.getY() + 2, pos.getZ() - dirX + dirZ));
 
         for(int i = 0; i < list.size(); ++i) {
             Entity e = list.get(i);
             Vec3d dir = user.getRotationVec(0);
             Vec3d knockBack = new Vec3d(dir.x * 2, 0.2, dir.z * 2);
-            e.damage(DamageSource.GENERIC, getAttackDamage(this.getMaterial()) * .7f);
+            //e.damage(new DamageSource((RegistryEntry<DamageType>) DamageTypes.GENERIC), getAttackDamage(this.getMaterial()) * .7f);
+            e.damage(e.getDamageSources().generic(), getAttackDamage(this.getMaterial()) * .7f);
             if(this.getMaterial() == ToolMaterials.NETHERITE) {
                 if(!e.isFireImmune()) {
                     e.setOnFireFor(4);

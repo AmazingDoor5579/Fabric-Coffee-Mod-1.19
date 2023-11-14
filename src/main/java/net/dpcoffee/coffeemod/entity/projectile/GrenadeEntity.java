@@ -65,7 +65,7 @@ public class GrenadeEntity extends ThrownItemEntity {
         this.setCookTime(i);
         if(i >= this.max_cook_time) {
             this.discard();
-           if(!this.world.isClient) {
+           if(!this.getWorld().isClient) {
                 this.Explode();
             }
         }
@@ -77,7 +77,7 @@ public class GrenadeEntity extends ThrownItemEntity {
 
 
     private void Explode() {
-        this.world.createExplosion(this, this.getX(),this.getY(),this.getZ(), 4.0f, false, World.ExplosionSourceType.NONE);
+        this.getWorld().createExplosion(this, this.getX(),this.getY(),this.getZ(), 4.0f, false, World.ExplosionSourceType.NONE);
     }
     public int getCookTime() {return this.dataTracker.get(CURRENT_COOK);}
 

@@ -10,7 +10,7 @@ public class ModInventoryScreen extends InventoryScreen {
         super(player);
     }
 
-    @Override
+
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
 
     }
