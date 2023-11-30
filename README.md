@@ -1,11 +1,11 @@
 # Coffee Mod
 
 ## Fabric API
-fabric-api-0.76.1+19.3: https://www.curseforge.com/minecraft/mc-mods/fabric-api/files/4485410
+Fabric API 0.90.7+1.20.1: https://modrinth.com/mod/fabric-api/version/0.90.7+1.20.1
 
 ## Dependencies
-geckolib-fabric-1.19.3-4.0.2: https://www.curseforge.com/minecraft/mc-mods/geckolib/files/4181381 \
-trinkets-3.5.1: https://www.curseforge.com/minecraft/mc-mods/trinkets/files/4343754
+geckolib-fabric-1.20.1-4.2.4: https://modrinth.com/mod/geckolib/version/4.2.4 \
+trinkets-3.7.1: https://modrinth.com/mod/trinkets/version/3.7.1
 
 # Crafting Recipes
 ## Coffee Items
@@ -48,3 +48,8 @@ trinkets-3.5.1: https://www.curseforge.com/minecraft/mc-mods/trinkets/files/4343
 ## Explosives
 ### Grenade
 ![Crafting Recipe for Grenade](./Crafting%20Recipes/Grenade.jpg)
+## Trinket Modifier Items
+### Mycelic Diamond
+![Crafting Recipe for Mycelic Diamond](./Crafting%20Recipes/Mycelic Diamond.jpg)
+### Mythic Anvil
+![Crafting Recipe for Grenade](./Crafting%20Recipes/Mythic Anvil.jpg)
