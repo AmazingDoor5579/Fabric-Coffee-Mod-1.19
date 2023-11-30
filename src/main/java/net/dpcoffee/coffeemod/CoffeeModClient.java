@@ -13,6 +13,7 @@ import net.dpcoffee.coffeemod.item.ModItems;
 import net.dpcoffee.coffeemod.networking.ModPackets;
 import net.dpcoffee.coffeemod.screen.JetPackChargerScreen;
 import net.dpcoffee.coffeemod.screen.ModScreenHandlers;
+import net.dpcoffee.coffeemod.screen.MythicAnvilScreen;
 import net.dpcoffee.coffeemod.screen.StaffChargerScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -31,6 +32,7 @@ public class CoffeeModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STAFF_HOLDER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COFFEE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STAFF_HOLDER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_MUSHROOM, RenderLayer.getTranslucent());
 
         TrinketRendererRegistry.registerRenderer(ModItems.JET_PACK, new JetPackEntityRenderer());
         TrinketRendererRegistry.registerRenderer(ModItems.HEALTH_BRACELET, new HealthRingEntityRenderer());
@@ -49,6 +51,7 @@ public class CoffeeModClient implements ClientModInitializer {
         HudRenderCallback.EVENT.register(new JetPackChargeOverlay());
         HudRenderCallback.EVENT.register(new GrenadeCookOverlay());
 
+        HandledScreens.register(ModScreenHandlers.MYTHIC_ANVIL_SCREEN_HANLDER, MythicAnvilScreen::new);
         HandledScreens.register(ModScreenHandlers.STAFF_CHARGER_SCREEN_HANDLER, StaffChargerScreen::new);
         HandledScreens.register(ModScreenHandlers.JET_PACK_CHARGER_SCREEN_HANDLER, JetPackChargerScreen::new);
         KeyInputHandler.registerKeyInputs();

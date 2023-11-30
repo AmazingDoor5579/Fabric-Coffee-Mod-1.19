@@ -45,7 +45,41 @@ public class BlockMixin {
         ItemStack stack = player.getStackInHand(player.getActiveHand());
         Item item = stack.getItem();
 
-        if (EnchantmentHelper.getLevel(EnchantmentRegistry.TUNNELER, stack) == 2) {
+        if (EnchantmentHelper.getLevel(EnchantmentRegistry.TUNNELER, stack) == 3) {
+            int facingX = player.getHorizontalFacing().getVector().getX();
+            int facingZ = player.getHorizontalFacing().getVector().getZ();
+            BlockPos[] breaks = {
+                    new BlockPos(pos.getX() + facingZ , pos.getY(), pos.getZ() + facingX),
+                    new BlockPos(pos.getX() - facingZ , pos.getY(), pos.getZ() - facingX),
+                    new BlockPos(pos.getX() , pos.getY() - 1, pos.getZ()),
+                    new BlockPos(pos.getX() , pos.getY() + 1, pos.getZ()),
+
+                    new BlockPos(pos.getX() + facingZ , pos.getY() - 1, pos.getZ() + facingX),
+                    new BlockPos(pos.getX() - facingZ , pos.getY() - 1, pos.getZ() - facingX),
+                    new BlockPos(pos.getX() + facingZ , pos.getY() + 1, pos.getZ() + facingX),
+                    new BlockPos(pos.getX() - facingZ , pos.getY() + 1, pos.getZ() - facingX)
+            };
+            for (BlockPos newPos: breaks) {
+                BlockState blockState = world.getBlockState(newPos);
+                if(Arrays.asList(shovels).contains(item)){
+                    if (Arrays.asList(shovel).contains(blockState.getBlock())) {
+                        boolean creative = player.isCreative();
+                        if (!creative) {
+                            stack.damage(1, world.random, (ServerPlayerEntity) player);
+                        }
+                        world.breakBlock(newPos, !creative, player);
+                    }
+                } else if(Arrays.asList(picks).contains(item)) {
+                    if (Arrays.asList(pick).contains(blockState.getBlock())) {
+                        boolean creative = player.isCreative();
+                        if (!creative) {
+                            stack.damage(1, world.random, (ServerPlayerEntity) player);
+                        }
+                        world.breakBlock(newPos, !creative, player);
+                    }
+                }
+            }
+        } else if (EnchantmentHelper.getLevel(EnchantmentRegistry.TUNNELER, stack) == 2) {
             int facingX = player.getHorizontalFacing().getVector().getX();
             int facingZ = player.getHorizontalFacing().getVector().getZ();
             BlockPos[] breaks = {

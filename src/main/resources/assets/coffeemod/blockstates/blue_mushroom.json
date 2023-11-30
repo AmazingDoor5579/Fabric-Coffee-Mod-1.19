@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "coffeemod:block/blue_mushroom"
+      },
+      {
+        "model": "coffeemod:block/blue_mushroom",
+        "y": 180
+      }
+    ]
+  }
+}

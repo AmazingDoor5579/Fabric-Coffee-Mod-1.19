@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "coffeemod:block/mythic_anvil" },
+    "facing=north": { "model": "coffeemod:block/mythic_anvil", "y": 180 },
+    "facing=east":  { "model": "coffeemod:block/mythic_anvil", "y": 270 },
+    "facing=west":  { "model": "coffeemod:block/mythic_anvil", "y": 90 }
+  }
+}

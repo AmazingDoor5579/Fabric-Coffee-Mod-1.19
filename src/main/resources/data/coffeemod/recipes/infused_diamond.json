@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mmm",
+    "mdm",
+    "mmm"
+  ],
+  "key": {
+    "m": {
+      "item": "coffeemod:blue_mushroom"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "coffeemod:infused_diamond"
+  }
+}

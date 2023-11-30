@@ -26,31 +26,32 @@ import net.minecraft.world.World;
 import java.util.Random;
 import java.util.UUID;
 
-public class HealthBraceletItem extends TrinketItem {
+public class HealthBraceletItem extends WeakStrongTrinket {
     Random r = new Random();
 
-    public HealthBraceletItem(Settings settings) {
-        super(settings);
+    public HealthBraceletItem(Settings settings, int weak, int strong, int minimum_strength, int maximum_strength) {
+        super(settings, weak, strong, minimum_strength, maximum_strength);
+    }
+
+
+    @Override
+    public void setWeak(int i) {
+        super.setWeak(3);
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        super.inventoryTick(stack, world, entity, slot, selected);
-        if(entity instanceof PlayerEntity) {
-            ItemStack itemstack = stack;
-            if(!world.isClient) {
-                if(!itemstack.hasNbt() && stack.getItem() instanceof HealthBraceletItem) {
-                    itemstack.getOrCreateNbt().putInt("modifier", r.nextInt(10 - 2) + 2);
-                    if(stack.getNbt().getInt("modifier") < 4) {
-                        stack.setCustomName(Text.translatable("Weak " + stack.getName().getString()).formatted(Formatting.RESET));
-                    } else if(stack.getNbt().getInt("modifier") > 7) {
-                        stack.setCustomName(Text.translatable("Strong " + stack.getName().getString().formatted(Formatting.RESET)));
-                    } else {
-                        stack.setCustomName(Text.translatable(stack.getName().getString()).formatted(Formatting.RESET));
-                    }
-                }
-            }
-        }
+    public void setStrong(int i) {
+        super.setStrong(7);
+    }
+
+    @Override
+    public void setMaxStrength(int i) {
+        super.setMaxStrength(10);
+    }
+
+    @Override
+    public void setMinimumStrength(int i) {
+        super.setMinimumStrength(2);
     }
 
     @Override

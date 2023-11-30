@@ -17,30 +17,10 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Random;
 
-public class NecklaceOfRegenerationItem extends TrinketItem {
-    public NecklaceOfRegenerationItem(Settings settings) {
-        super(settings);
-    }
+public class NecklaceOfRegenerationItem extends WeakStrongTrinket {
 
-    Random r = new Random();
-
-    @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        super.inventoryTick(stack, world, entity, slot, selected);
-        if(entity instanceof PlayerEntity) {
-            ItemStack itemstack = stack;
-            if(!world.isClient) {
-                if(!itemstack.hasNbt() && stack.getItem() instanceof NecklaceOfRegenerationItem) {
-                    itemstack.getOrCreateNbt().putInt("modifier", r.nextInt(2));
-                    System.out.println(stack.getNbt().getInt("modifier"));
-                    if(stack.getNbt().getInt("modifier") == 1) {
-                        stack.setCustomName(Text.translatable("Strong " + stack.getName().getString()).formatted(Formatting.RESET));
-                    } else {
-                        stack.setCustomName(Text.translatable(stack.getName().getString()).formatted(Formatting.RESET));
-                    }
-                }
-            }
-        }
+    public NecklaceOfRegenerationItem(Settings settings, int weak, int strong, int minimum_strength, int maximum_strength) {
+        super(settings, weak, strong, minimum_strength, maximum_strength);
     }
 
     @Override

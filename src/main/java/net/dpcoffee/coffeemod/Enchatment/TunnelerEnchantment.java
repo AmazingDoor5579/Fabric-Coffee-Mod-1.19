@@ -12,11 +12,16 @@ public class TunnelerEnchantment extends Enchantment {
 
     @Override
     public int getMinPower(int level) {
-        return 1;
+        return 5 + (level - 1) * 8;
+    }
+
+    @Override
+    public int getMaxPower(int level) {
+        return super.getMinPower(level) + 50;
     }
 
     @Override
     public int getMaxLevel() {
-        return 2;
+        return 3;
     }
 }

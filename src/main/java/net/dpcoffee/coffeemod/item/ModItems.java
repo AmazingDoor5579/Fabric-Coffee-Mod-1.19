@@ -10,7 +10,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
+
 public class ModItems {
+    public static final Item INFUSED_DIAMOND = registerItem("infused_diamond", new Item(new FabricItemSettings()), ItemGroups.INGREDIENTS);
     public static final Item CUP = registerItem("cup", new Item(new FabricItemSettings()), ItemGroups.FOOD_AND_DRINK);
     public static final Item FIRE_STONE = registerItem("fire_stone", new Item(new FabricItemSettings().maxCount(64)), ItemGroups.INGREDIENTS);
     public static final Item FIRE_STAFF = registerItem("fire_wand", new FireWand(new FabricItemSettings().maxCount(1)), ItemGroups.COMBAT);
@@ -20,8 +22,8 @@ public class ModItems {
     public static final Item JET_PACK = registerItem("jet_pack", new JetPackItem(new FabricItemSettings().maxCount(1)), ItemGroups.FUNCTIONAL);
     public static final Item NETHERITE_INFUSED_COFFEE_BEANS = registerItem("netherite_infused_coffee_beans", new Item(new FabricItemSettings()), ItemGroups.FOOD_AND_DRINK);
     public static final Item GRENADE_ITEM = registerItem("grenade", new GrenadeItem(new FabricItemSettings()), ItemGroups.COMBAT);
-    public static final Item HEALTH_BRACELET = registerItem("health_bracelet", new HealthBraceletItem(new FabricItemSettings().maxCount(1)), ItemGroups.COMBAT);
-    public static final Item NECKLACE_OF_REGENERATION = registerItem("necklace_of_regeneration", new NecklaceOfRegenerationItem(new FabricItemSettings().maxCount(1)), ItemGroups.COMBAT);
+    public static final Item HEALTH_BRACELET = registerItem("health_bracelet", new HealthBraceletItem(new FabricItemSettings().maxCount(1), 3, 7, 2, 10), ItemGroups.COMBAT);
+    public static final Item NECKLACE_OF_REGENERATION = registerItem("necklace_of_regeneration", new NecklaceOfRegenerationItem(new FabricItemSettings().maxCount(1), 0, 1, 0, 1), ItemGroups.COMBAT);
 
     public static final Item WOODEN_HAMMER = registerItem("wooden_hammer", new HammerItem(new FabricItemSettings().maxCount(1).maxDamage(300), -3.3f, ToolMaterials.WOOD), ItemGroups.COMBAT);
     public static final Item STONE_HAMMER = registerItem("stone_hammer", new HammerItem(new FabricItemSettings().maxCount(1).maxDamage(550), -3.3f, ToolMaterials.STONE), ItemGroups.COMBAT);

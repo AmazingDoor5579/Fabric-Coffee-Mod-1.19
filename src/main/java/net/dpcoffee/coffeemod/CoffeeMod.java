@@ -11,10 +11,12 @@ import net.dpcoffee.coffeemod.entity.custom.CoffeeSpiderEntity;
 import net.dpcoffee.coffeemod.entity.custom.CoffeeThingEntity;
 import net.dpcoffee.coffeemod.entity.projectile.GrenadeEntity;
 import net.dpcoffee.coffeemod.gen.ModEntitySpawn;
+import net.dpcoffee.coffeemod.gen.ModWorldGeneration;
 import net.dpcoffee.coffeemod.item.ModItems;
 import net.dpcoffee.coffeemod.networking.ModPackets;
 import net.dpcoffee.coffeemod.screen.ModScreenHandlers;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -22,10 +24,12 @@ import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.registry.*;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BuiltinBiomes;
+import net.minecraft.world.biome.OverworldBiomeCreator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.bernie.geckolib.GeckoLib;
@@ -40,14 +44,17 @@ public class CoffeeMod implements ModInitializer {
 	public static SoundEvent COFFEE_GOLEM_HURT = SoundEvent.of(new Identifier(MOD_ID, "coffee_golem_hurt"));
 	public static SoundEvent COFFEE_GOLEM_AMBIENT = SoundEvent.of(new Identifier(MOD_ID, "coffee_golem_ambient"));
 
+
 	@Override
 	public void onInitialize() {
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerAllScreenHandlers();
 		GeckoLib.initialize();
 		EnchantmentRegistry.registerEnchantments();
+		ModWorldGeneration.generateModWorldGen();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.COFFEE_THING, CoffeeThingEntity.setAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.COFFEE_GOLEM, CoffeeGolemEntity.setAttributes());
