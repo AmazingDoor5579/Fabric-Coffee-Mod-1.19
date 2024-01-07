@@ -50,9 +50,9 @@ trinkets-3.7.1: https://modrinth.com/mod/trinkets/version/3.7.1
 ![Crafting Recipe for Grenade](./Crafting%20Recipes/Grenade.jpg)
 ## Trinket Modifier Items
 ### Mycelic Diamond
-![Crafting Recipe for Mycelic Diamond](./Crafting%20Recipes/Mycelic Diamond.jpg)
+![Crafting Recipe for Mycelic Diamond](./Crafting%20Recipes/Mycelic%20Diamond.jpg)
 ### Mythic Anvil
-![Crafting Recipe for Grenade](./Crafting%20Recipes/Mythic Anvil.jpg)
+![Crafting Recipe for Grenade](./Crafting%20Recipes/Mythic%20Anvil.jpg)
 ## Decorative
 ### Chairs
 ![Crafting Recipe for Chairs](./Crafting%20Recipes/Chair.jpg)
