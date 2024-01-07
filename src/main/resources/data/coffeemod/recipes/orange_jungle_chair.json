@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "F  ",
+        "SCS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "F": {
+            "item": "jungle_fence"
+        },
+        "C": {
+            "item": "orange_carpet"
+        }
+    },
+    "result": {
+        "item": "coffeemod:orange_jungle_chair",
+        "count": 1
+    }
+}

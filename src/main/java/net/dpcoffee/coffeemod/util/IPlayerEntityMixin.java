@@ -1,9 +1,9 @@
 package net.dpcoffee.coffeemod.util;
 
-import net.minecraft.item.ItemUsageContext;
+import net.minecraft.util.math.BlockPos;
 
 public interface IPlayerEntityMixin {
-    void setAttackCoolDown(int i);
-    int getAttackCoolDown();
-    void hammerAttack(ItemUsageContext context);
+    void trySit(BlockPos pos);
+    boolean inSittingPos();
+    void setSitting(boolean sitting);
 }

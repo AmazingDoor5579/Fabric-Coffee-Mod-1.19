@@ -53,3 +53,7 @@ trinkets-3.7.1: https://modrinth.com/mod/trinkets/version/3.7.1
 ![Crafting Recipe for Mycelic Diamond](./Crafting%20Recipes/Mycelic Diamond.jpg)
 ### Mythic Anvil
 ![Crafting Recipe for Grenade](./Crafting%20Recipes/Mythic Anvil.jpg)
+## Decorative
+### Chairs
+![Crafting Recipe for Chairs](./Crafting%20Recipes/Chair.jpg)
+- Recipe works with any fence and any carpet

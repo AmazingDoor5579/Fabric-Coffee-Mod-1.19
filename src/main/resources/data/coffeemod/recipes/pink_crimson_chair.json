@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "F  ",
+        "SCS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "F": {
+            "item": "crimson_fence"
+        },
+        "C": {
+            "item": "pink_carpet"
+        }
+    },
+    "result": {
+        "item": "coffeemod:pink_crimson_chair",
+        "count": 1
+    }
+}

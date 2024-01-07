@@ -1,5 +1,6 @@
 package net.dpcoffee.coffeemod.gen;
 
+import net.dpcoffee.coffeemod.datagen.ModRecipeProvider;
 import net.dpcoffee.coffeemod.world.ModConfiguredFeatures;
 import net.dpcoffee.coffeemod.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;

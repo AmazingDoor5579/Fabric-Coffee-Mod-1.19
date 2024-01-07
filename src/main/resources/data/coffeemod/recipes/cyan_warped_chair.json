@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "F  ",
+        "SCS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "F": {
+            "item": "warped_fence"
+        },
+        "C": {
+            "item": "cyan_carpet"
+        }
+    },
+    "result": {
+        "item": "coffeemod:cyan_warped_chair",
+        "count": 1
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "variants": {
+        "facing=south,part=top": {
+            "model": "coffeemod:block/bamboo_chair/bamboo_chair_top"
+        },
+        "facing=north,part=top": {
+            "model": "coffeemod:block/bamboo_chair/bamboo_chair_top",
+            "y": 180
+        },
+        "facing=east,part=top": {
+            "model": "coffeemod:block/bamboo_chair/bamboo_chair_top",
+            "y": 270
+        },
+        "facing=west,part=top": {
+            "model": "coffeemod:block/bamboo_chair/bamboo_chair_top",
+            "y": 90
+        },
+        "facing=south,part=bottom": {
+            "model": "coffeemod:block/bamboo_chair/green_bamboo_chair_bottom"
+        },
+        "facing=north,part=bottom": {
+            "model": "coffeemod:block/bamboo_chair/green_bamboo_chair_bottom",
+            "y": 180
+        },
+        "facing=east,part=bottom": {
+            "model": "coffeemod:block/bamboo_chair/green_bamboo_chair_bottom",
+            "y": 270
+        },
+        "facing=west,part=bottom": {
+            "model": "coffeemod:block/bamboo_chair/green_bamboo_chair_bottom",
+            "y": 90
+        }
+    }
+}

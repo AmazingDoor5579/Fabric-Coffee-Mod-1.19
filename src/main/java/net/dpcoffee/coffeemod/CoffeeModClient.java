@@ -19,6 +19,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.minecraft.block.Block;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
@@ -33,6 +34,10 @@ public class CoffeeModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COFFEE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STAFF_HOLDER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_MUSHROOM, RenderLayer.getTranslucent());
+
+        for (Block chair : ModBlocks.CHAIRS) {
+            BlockRenderLayerMap.INSTANCE.putBlock(chair, RenderLayer.getTranslucent());
+        }
 
         TrinketRendererRegistry.registerRenderer(ModItems.JET_PACK, new JetPackEntityRenderer());
         TrinketRendererRegistry.registerRenderer(ModItems.HEALTH_BRACELET, new HealthRingEntityRenderer());

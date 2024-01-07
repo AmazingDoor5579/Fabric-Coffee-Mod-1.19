@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "F  ",
+        "SCS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "F": {
+            "item": "acacia_fence"
+        },
+        "C": {
+            "item": "brown_carpet"
+        }
+    },
+    "result": {
+        "item": "coffeemod:brown_acacia_chair",
+        "count": 1
+    }
+}

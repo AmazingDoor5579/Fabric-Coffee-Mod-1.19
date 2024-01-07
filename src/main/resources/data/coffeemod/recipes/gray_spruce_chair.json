@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "F  ",
+        "SCS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "F": {
+            "item": "spruce_fence"
+        },
+        "C": {
+            "item": "gray_carpet"
+        }
+    },
+    "result": {
+        "item": "coffeemod:gray_spruce_chair",
+        "count": 1
+    }
+}

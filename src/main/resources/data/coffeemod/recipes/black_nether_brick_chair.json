@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "F  ",
+        "SCS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "F": {
+            "item": "nether_brick_fence"
+        },
+        "C": {
+            "item": "black_carpet"
+        }
+    },
+    "result": {
+        "item": "coffeemod:black_nether_brick_chair",
+        "count": 1
+    }
+}

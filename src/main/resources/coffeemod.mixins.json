@@ -8,7 +8,10 @@
   "client": [
     "BlockMixin",
     "GameOptionsMixin",
-    "ModEntityDataSaverMixin"
+    "ModEntityDataSaverMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin",
+    "BipedEntityModelMixin"
   ],
   "injectors": {
     "defaultRequire": 1

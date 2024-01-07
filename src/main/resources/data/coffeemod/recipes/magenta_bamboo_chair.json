@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "F  ",
+        "SCS",
+        "S S"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "F": {
+            "item": "bamboo_fence"
+        },
+        "C": {
+            "item": "magenta_carpet"
+        }
+    },
+    "result": {
+        "item": "coffeemod:magenta_bamboo_chair",
+        "count": 1
+    }
+}
